@@ -18,7 +18,7 @@ const anotherId = Symbol('123') // symbol(123)
 
 
 const bigNumber = 265165165196816851455n
-console.log(typeof bigNumber);  // BigInt
+// console.log(typeof bigNumber);  // BigInt
  
 
 
@@ -45,7 +45,7 @@ const heros = ["shaktiman", "naagraj", "virat"]
         
     }
 
-    console.log(typeof outsideTemp);  // object
+    // console.log(typeof outsideTemp);  // object
 
 
 
@@ -59,6 +59,21 @@ const heros = ["shaktiman", "naagraj", "virat"]
 // | Object (native and does not implement `[[Call]]`)     | `"object"`                                                                                         |
 // | Object (native or host and does implement `[[Call]]`) | `"function"`                                                                                       |
 // | Object (host and does not implement `[[Call]]`)       | Implementation-defined, except it may not be `"undefined"`, `"boolean"`, `"number"`, or `"string"` |
+
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo  = userOne
+
+userTwo.email = "hitesh@google.com"
+console.log(userOne.email);
+console.log(userTwo.email);
+
 
 
 
